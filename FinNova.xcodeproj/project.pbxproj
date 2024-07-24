@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F12C516EC400E24C2A /* AppDelegate.swift */; };
+		F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F32C516EC400E24C2A /* SceneDelegate.swift */; };
+		F7C748F62C516EC400E24C2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F52C516EC400E24C2A /* ViewController.swift */; };
+		F7C748F92C516EC400E24C2A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7C748F82C516EC400E24C2A /* Base */; };
+		F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C748FA2C516EC600E24C2A /* Assets.xcassets */; };
+		F7C748FE2C516EC600E24C2A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7C748FD2C516EC600E24C2A /* Base */; };
+		F7C749092C516EC600E24C2A /* FinNovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749082C516EC600E24C2A /* FinNovaTests.swift */; };
+		F7C749132C516EC600E24C2A /* FinNovaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749122C516EC600E24C2A /* FinNovaUITests.swift */; };
+		F7C749152C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7C749052C516EC600E24C2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C748E62C516EC400E24C2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C748ED2C516EC400E24C2A;
+			remoteInfo = FinNova;
+		};
+		F7C7490F2C516EC600E24C2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C748E62C516EC400E24C2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C748ED2C516EC400E24C2A;
+			remoteInfo = FinNova;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7C748EE2C516EC400E24C2A /* FinNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C748F12C516EC400E24C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7C748F32C516EC400E24C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F7C748F52C516EC400E24C2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7C748F82C516EC400E24C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7C748FA2C516EC600E24C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7C748FD2C516EC600E24C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7C748FF2C516EC600E24C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C749042C516EC600E24C2A /* FinNovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinNovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C749082C516EC600E24C2A /* FinNovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaTests.swift; sourceTree = "<group>"; };
+		F7C7490E2C516EC600E24C2A /* FinNovaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinNovaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C749122C516EC600E24C2A /* FinNovaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaUITests.swift; sourceTree = "<group>"; };
+		F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7C748EB2C516EC400E24C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C749012C516EC600E24C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C7490B2C516EC600E24C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7C748E52C516EC400E24C2A = {
+			isa = PBXGroup;
+			children = (
+				F7C748F02C516EC400E24C2A /* FinNova */,
+				F7C749072C516EC600E24C2A /* FinNovaTests */,
+				F7C749112C516EC600E24C2A /* FinNovaUITests */,
+				F7C748EF2C516EC400E24C2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7C748EF2C516EC400E24C2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C748EE2C516EC400E24C2A /* FinNova.app */,
+				F7C749042C516EC600E24C2A /* FinNovaTests.xctest */,
+				F7C7490E2C516EC600E24C2A /* FinNovaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7C748F02C516EC400E24C2A /* FinNova */ = {
+			isa = PBXGroup;
+			children = (
+				F7C748F12C516EC400E24C2A /* AppDelegate.swift */,
+				F7C748F32C516EC400E24C2A /* SceneDelegate.swift */,
+				F7C748F52C516EC400E24C2A /* ViewController.swift */,
+				F7C748F72C516EC400E24C2A /* Main.storyboard */,
+				F7C748FA2C516EC600E24C2A /* Assets.xcassets */,
+				F7C748FC2C516EC600E24C2A /* LaunchScreen.storyboard */,
+				F7C748FF2C516EC600E24C2A /* Info.plist */,
+			);
+			path = FinNova;
+			sourceTree = "<group>";
+		};
+		F7C749072C516EC600E24C2A /* FinNovaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7C749082C516EC600E24C2A /* FinNovaTests.swift */,
+			);
+			path = FinNovaTests;
+			sourceTree = "<group>";
+		};
+		F7C749112C516EC600E24C2A /* FinNovaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7C749122C516EC600E24C2A /* FinNovaUITests.swift */,
+				F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */,
+			);
+			path = FinNovaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7C748ED2C516EC400E24C2A /* FinNova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C749182C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNova" */;
+			buildPhases = (
+				F7C748EA2C516EC400E24C2A /* Sources */,
+				F7C748EB2C516EC400E24C2A /* Frameworks */,
+				F7C748EC2C516EC400E24C2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinNova;
+			productName = FinNova;
+			productReference = F7C748EE2C516EC400E24C2A /* FinNova.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7C749032C516EC600E24C2A /* FinNovaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C7491B2C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNovaTests" */;
+			buildPhases = (
+				F7C749002C516EC600E24C2A /* Sources */,
+				F7C749012C516EC600E24C2A /* Frameworks */,
+				F7C749022C516EC600E24C2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7C749062C516EC600E24C2A /* PBXTargetDependency */,
+			);
+			name = FinNovaTests;
+			productName = FinNovaTests;
+			productReference = F7C749042C516EC600E24C2A /* FinNovaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7C7490D2C516EC600E24C2A /* FinNovaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C7491E2C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNovaUITests" */;
+			buildPhases = (
+				F7C7490A2C516EC600E24C2A /* Sources */,
+				F7C7490B2C516EC600E24C2A /* Frameworks */,
+				F7C7490C2C516EC600E24C2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7C749102C516EC600E24C2A /* PBXTargetDependency */,
+			);
+			name = FinNovaUITests;
+			productName = FinNovaUITests;
+			productReference = F7C7490E2C516EC600E24C2A /* FinNovaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7C748E62C516EC400E24C2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F7C748ED2C516EC400E24C2A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					F7C749032C516EC600E24C2A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F7C748ED2C516EC400E24C2A;
+					};
+					F7C7490D2C516EC600E24C2A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F7C748ED2C516EC400E24C2A;
+					};
+				};
+			};
+			buildConfigurationList = F7C748E92C516EC400E24C2A /* Build configuration list for PBXProject "FinNova" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7C748E52C516EC400E24C2A;
+			productRefGroup = F7C748EF2C516EC400E24C2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7C748ED2C516EC400E24C2A /* FinNova */,
+				F7C749032C516EC600E24C2A /* FinNovaTests */,
+				F7C7490D2C516EC600E24C2A /* FinNovaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7C748EC2C516EC400E24C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */,
+				F7C748FE2C516EC600E24C2A /* Base in Resources */,
+				F7C748F92C516EC400E24C2A /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C749022C516EC600E24C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C7490C2C516EC600E24C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7C748EA2C516EC400E24C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C748F62C516EC400E24C2A /* ViewController.swift in Sources */,
+				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
+				F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C749002C516EC600E24C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C749092C516EC600E24C2A /* FinNovaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C7490A2C516EC600E24C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C749152C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift in Sources */,
+				F7C749132C516EC600E24C2A /* FinNovaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7C749062C516EC600E24C2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C748ED2C516EC400E24C2A /* FinNova */;
+			targetProxy = F7C749052C516EC600E24C2A /* PBXContainerItemProxy */;
+		};
+		F7C749102C516EC600E24C2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C748ED2C516EC400E24C2A /* FinNova */;
+			targetProxy = F7C7490F2C516EC600E24C2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7C748F72C516EC400E24C2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C748F82C516EC400E24C2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7C748FC2C516EC600E24C2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C748FD2C516EC600E24C2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7C749162C516EC600E24C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7C749172C516EC600E24C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7C749192C516EC600E24C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinNova/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7C7491A2C516EC600E24C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinNova/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7C7491C2C516EC600E24C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinNova.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinNova";
+			};
+			name = Debug;
+		};
+		F7C7491D2C516EC600E24C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinNova.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinNova";
+			};
+			name = Release;
+		};
+		F7C7491F2C516EC600E24C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FinNova;
+			};
+			name = Debug;
+		};
+		F7C749202C516EC600E24C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RP8Z4C64KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elifay.FinNovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FinNova;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7C748E92C516EC400E24C2A /* Build configuration list for PBXProject "FinNova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C749162C516EC600E24C2A /* Debug */,
+				F7C749172C516EC600E24C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C749182C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C749192C516EC600E24C2A /* Debug */,
+				F7C7491A2C516EC600E24C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C7491B2C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNovaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C7491C2C516EC600E24C2A /* Debug */,
+				F7C7491D2C516EC600E24C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C7491E2C516EC600E24C2A /* Build configuration list for PBXNativeTarget "FinNovaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C7491F2C516EC600E24C2A /* Debug */,
+				F7C749202C516EC600E24C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7C748E62C516EC400E24C2A /* Project object */;
+}
