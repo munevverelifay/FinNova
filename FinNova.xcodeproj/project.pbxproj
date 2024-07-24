@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F12C516EC400E24C2A /* AppDelegate.swift */; };
 		F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F32C516EC400E24C2A /* SceneDelegate.swift */; };
-		F7C748F62C516EC400E24C2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C748F52C516EC400E24C2A /* ViewController.swift */; };
-		F7C748F92C516EC400E24C2A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7C748F82C516EC400E24C2A /* Base */; };
 		F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C748FA2C516EC600E24C2A /* Assets.xcassets */; };
 		F7C748FE2C516EC600E24C2A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7C748FD2C516EC600E24C2A /* Base */; };
 		F7C749092C516EC600E24C2A /* FinNovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749082C516EC600E24C2A /* FinNovaTests.swift */; };
 		F7C749132C516EC600E24C2A /* FinNovaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749122C516EC600E24C2A /* FinNovaUITests.swift */; };
 		F7C749152C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */; };
+		F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749212C516F6C00E24C2A /* HomeViewController.swift */; };
+		F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		F7C748EE2C516EC400E24C2A /* FinNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C748F12C516EC400E24C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C748F32C516EC400E24C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7C748F52C516EC400E24C2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F7C748F82C516EC400E24C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7C748FA2C516EC600E24C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C748FD2C516EC600E24C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7C748FF2C516EC600E24C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		F7C7490E2C516EC600E24C2A /* FinNovaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinNovaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C749122C516EC600E24C2A /* FinNovaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaUITests.swift; sourceTree = "<group>"; };
 		F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F7C749212C516F6C00E24C2A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,12 @@
 		F7C748F02C516EC400E24C2A /* FinNova */ = {
 			isa = PBXGroup;
 			children = (
+				F7C749232C516FB700E24C2A /* Scene */,
+				F7C749242C516FBC00E24C2A /* View */,
+				F7C749262C516FDF00E24C2A /* Model */,
+				F7C749272C516FEB00E24C2A /* Manager */,
 				F7C748F12C516EC400E24C2A /* AppDelegate.swift */,
 				F7C748F32C516EC400E24C2A /* SceneDelegate.swift */,
-				F7C748F52C516EC400E24C2A /* ViewController.swift */,
-				F7C748F72C516EC400E24C2A /* Main.storyboard */,
 				F7C748FA2C516EC600E24C2A /* Assets.xcassets */,
 				F7C748FC2C516EC600E24C2A /* LaunchScreen.storyboard */,
 				F7C748FF2C516EC600E24C2A /* Info.plist */,
@@ -125,6 +127,60 @@
 				F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */,
 			);
 			path = FinNovaUITests;
+			sourceTree = "<group>";
+		};
+		F7C749232C516FB700E24C2A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F7C749212C516F6C00E24C2A /* HomeViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F7C749242C516FBC00E24C2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7C7492A2C51707900E24C2A /* CustomView */,
+				F7C749282C516FF700E24C2A /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7C749262C516FDF00E24C2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7C749272C516FEB00E24C2A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F7C749292C516FFA00E24C2A /* NetworkManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F7C749282C516FF700E24C2A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F7C749292C516FFA00E24C2A /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		F7C7492A2C51707900E24C2A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +289,6 @@
 			files = (
 				F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */,
 				F7C748FE2C516EC600E24C2A /* Base in Resources */,
-				F7C748F92C516EC400E24C2A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C748F62C516EC400E24C2A /* ViewController.swift in Sources */,
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
 				F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */,
+				F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */,
+				F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F7C748F72C516EC400E24C2A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7C748F82C516EC400E24C2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F7C748FC2C516EC600E24C2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +495,6 @@
 				INFOPLIST_FILE = FinNova/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +522,6 @@
 				INFOPLIST_FILE = FinNova/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
