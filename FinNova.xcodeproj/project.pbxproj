@@ -16,6 +16,9 @@
 		F7C749152C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */; };
 		F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749212C516F6C00E24C2A /* HomeViewController.swift */; };
 		F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */; };
+		F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7492E2C5180ED00E24C2A /* Colors.swift */; };
+		F7C749332C5186A900E24C2A /* TotalAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749322C5186A900E24C2A /* TotalAmountView.swift */; };
+		F7C749362C518E6D00E24C2A /* BudgetItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749352C518E6D00E24C2A /* BudgetItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F7C749142C516EC600E24C2A /* FinNovaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinNovaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F7C749212C516F6C00E24C2A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceItemView.swift; sourceTree = "<group>"; };
+		F7C7492E2C5180ED00E24C2A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F7C749322C5186A900E24C2A /* TotalAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountView.swift; sourceTree = "<group>"; };
+		F7C749352C518E6D00E24C2A /* BudgetItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		F7C748F02C516EC400E24C2A /* FinNova */ = {
 			isa = PBXGroup;
 			children = (
+				F7C7492D2C517FC400E24C2A /* Helper */,
 				F7C749232C516FB700E24C2A /* Scene */,
 				F7C749242C516FBC00E24C2A /* View */,
 				F7C749262C516FDF00E24C2A /* Model */,
@@ -164,6 +171,7 @@
 		F7C749282C516FF700E24C2A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F7C749352C518E6D00E24C2A /* BudgetItemCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -179,8 +187,17 @@
 			isa = PBXGroup;
 			children = (
 				F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */,
+				F7C749322C5186A900E24C2A /* TotalAmountView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F7C7492D2C517FC400E24C2A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7C7492E2C5180ED00E24C2A /* Colors.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
+				F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */,
+				F7C749362C518E6D00E24C2A /* BudgetItemCell.swift in Sources */,
 				F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */,
+				F7C749332C5186A900E24C2A /* TotalAmountView.swift in Sources */,
 				F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */,
 				F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */,
 			);
