@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BudgetDetailViewController: UITableViewController {
+final class BudgetDetailViewController: UITableViewController {
 
     var budgetItems: [BudgetItem] = []
     var groupedBudgetItems: [String: [BudgetItem]] = [:]

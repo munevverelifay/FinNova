@@ -35,7 +35,14 @@
 		F7C749682C51D71B00E24C2A /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749672C51D71B00E24C2A /* DGCharts */; };
 		F7C7496A2C51DAB500E24C2A /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749692C51DAB500E24C2A /* ExchangeRate.swift */; };
 		F7D0DB3C2C52188D00848C49 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB3B2C52188D00848C49 /* Fonts.swift */; };
-		F7D0DB4A2C521F4900848C49 /* QuoteMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = F7D0DB492C521F4900848C49 /* QuoteMockData.json */; };
+		F7D0DB4C2C52223A00848C49 /* CoreNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB4B2C52223A00848C49 /* CoreNetworkManager.swift */; };
+		F7D0DB4E2C52225000848C49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB4D2C52225000848C49 /* NetworkManager.swift */; };
+		F7D0DB502C52226000848C49 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB4F2C52226000848C49 /* NetworkHelper.swift */; };
+		F7D0DB522C52228100848C49 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB512C52228100848C49 /* Currency.swift */; };
+		F7D0DB552C5222AA00848C49 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB542C5222AA00848C49 /* ErrorTypes.swift */; };
+		F7D0DB572C5222DA00848C49 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB562C5222DA00848C49 /* HTTPMethod.swift */; };
+		F7D0DB592C52230200848C49 /* QuoteMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = F7D0DB582C52230200848C49 /* QuoteMockData.json */; };
+		F7D0DB5C2C52234600848C49 /* IncomeExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB5B2C52234600848C49 /* IncomeExpenseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +91,14 @@
 		F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewController.swift; sourceTree = "<group>"; };
 		F7C749692C51DAB500E24C2A /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		F7D0DB3B2C52188D00848C49 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		F7D0DB492C521F4900848C49 /* QuoteMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = QuoteMockData.json; path = ../../../../../Downloads/QuoteMockData.json; sourceTree = "<group>"; };
+		F7D0DB4B2C52223A00848C49 /* CoreNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkManager.swift; sourceTree = "<group>"; };
+		F7D0DB4D2C52225000848C49 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F7D0DB4F2C52226000848C49 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		F7D0DB512C52228100848C49 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		F7D0DB542C5222AA00848C49 /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
+		F7D0DB562C5222DA00848C49 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F7D0DB582C52230200848C49 /* QuoteMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuoteMockData.json; sourceTree = "<group>"; };
+		F7D0DB5B2C52234600848C49 /* IncomeExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,7 @@
 				F7C749242C516FBC00E24C2A /* View */,
 				F7C749262C516FDF00E24C2A /* Model */,
 				F7C749272C516FEB00E24C2A /* Manager */,
+				F7D0DB532C52229700848C49 /* Enums */,
 				F7C7492D2C517FC400E24C2A /* Helper */,
 				F7C749562C51C13300E24C2A /* Extensions */,
 				F7D0DB482C521F3200848C49 /* MockData */,
@@ -182,7 +197,7 @@
 				F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */,
 				F7C749212C516F6C00E24C2A /* HomeViewController.swift */,
 				F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */,
-				F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */,
+				F7D0DB5A2C52231F00848C49 /* IncomeExpenseScene */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 			children = (
 				F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */,
 				F7C749692C51DAB500E24C2A /* ExchangeRate.swift */,
+				F7D0DB512C52228100848C49 /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +241,9 @@
 		F7C749292C516FFA00E24C2A /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				F7D0DB4B2C52223A00848C49 /* CoreNetworkManager.swift */,
+				F7D0DB4D2C52225000848C49 /* NetworkManager.swift */,
+				F7D0DB4F2C52226000848C49 /* NetworkHelper.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -266,9 +285,27 @@
 		F7D0DB482C521F3200848C49 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				F7D0DB492C521F4900848C49 /* QuoteMockData.json */,
+				F7D0DB582C52230200848C49 /* QuoteMockData.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		F7D0DB532C52229700848C49 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F7D0DB542C5222AA00848C49 /* ErrorTypes.swift */,
+				F7D0DB562C5222DA00848C49 /* HTTPMethod.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F7D0DB5A2C52231F00848C49 /* IncomeExpenseScene */ = {
+			isa = PBXGroup;
+			children = (
+				F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */,
+				F7D0DB5B2C52234600848C49 /* IncomeExpenseViewModel.swift */,
+			);
+			path = IncomeExpenseScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D0DB4A2C521F4900848C49 /* QuoteMockData.json in Resources */,
+				F7D0DB592C52230200848C49 /* QuoteMockData.json in Resources */,
 				F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */,
 				F7C748FE2C516EC600E24C2A /* Base in Resources */,
 				F7C7494A2C51BC0D00E24C2A /* GoogleService-Info.plist in Resources */,
@@ -418,18 +455,25 @@
 				F7C7495A2C51CBFA00E24C2A /* BudgetDetailViewController.swift in Sources */,
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
 				F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */,
+				F7D0DB5C2C52234600848C49 /* IncomeExpenseViewModel.swift in Sources */,
+				F7D0DB4C2C52223A00848C49 /* CoreNetworkManager.swift in Sources */,
+				F7D0DB522C52228100848C49 /* Currency.swift in Sources */,
 				F7C7494E2C51BCF800E24C2A /* ForgotPasswordViewController.swift in Sources */,
+				F7D0DB502C52226000848C49 /* NetworkHelper.swift in Sources */,
 				F7C7496A2C51DAB500E24C2A /* ExchangeRate.swift in Sources */,
 				F7C749362C518E6D00E24C2A /* BudgetItemCell.swift in Sources */,
 				F7C749412C51B43700E24C2A /* FirebaseAuthManager.swift in Sources */,
 				F7C749382C51971B00E24C2A /* RegisterViewController.swift in Sources */,
 				F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */,
+				F7D0DB4E2C52225000848C49 /* NetworkManager.swift in Sources */,
 				F7C749602C51D4FC00E24C2A /* IncomeExpenseViewController.swift in Sources */,
 				F7C7494C2C51BC9D00E24C2A /* VerifyEmailViewController.swift in Sources */,
 				F7C749332C5186A900E24C2A /* TotalAmountView.swift in Sources */,
 				F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */,
 				F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */,
+				F7D0DB572C5222DA00848C49 /* HTTPMethod.swift in Sources */,
 				F7D0DB3C2C52188D00848C49 /* Fonts.swift in Sources */,
+				F7D0DB552C5222AA00848C49 /* ErrorTypes.swift in Sources */,
 				F7C7495C2C51CC5B00E24C2A /* BudgetItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,11 @@
 import UIKit
 import DGCharts
 
-class IncomeExpenseChartViewController: UIViewController {
+final class IncomeExpenseChartViewController: UIViewController {
     
-    var barChartView: BarChartView!
-    var segmentControl: UISegmentedControl!
-    var stackView: UIStackView!
-    var totalAmountView: TotalAmountView!
+    var data: Currency?
+    
+    var viewModel: IncomeExpenseViewModel?
     
     private let budgetItems: [(title: String, date: String, amount: String)] = [
         ("Shopping", "10 Jan 2022", "$544"),
@@ -29,48 +28,75 @@ class IncomeExpenseChartViewController: UIViewController {
     
     var selectedCurrency: String = "TRY"
     
+    var barChartView: BarChartView = {
+        let barChartView = BarChartView()
+        barChartView.translatesAutoresizingMaskIntoConstraints = false
+        return barChartView
+    }()
+    
+    var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    var totalAmountView: TotalAmountView = {
+        let totalAmountView = TotalAmountView()
+        totalAmountView.translatesAutoresizingMaskIntoConstraints = false
+        return totalAmountView
+    }()
+    
+    lazy var segmentControl: UISegmentedControl = {
+        let segmentControl = UISegmentedControl(items: ["TRY", "USD", "EUR"])
+        segmentControl.selectedSegmentIndex = 0
+        segmentControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        segmentControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentControl
+    }()
+    
+    init(viewModel: IncomeExpenseViewModel? = nil) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+   
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Gelir-Gider Grafiği"
         view.backgroundColor = .white
         
-        setupSegmentControl()
-        setupChartView()
-        setupStackView()
-        setupTotalAmountView()
+        setupViews()
         setupConstraints()
-        
         updateViews()
+        initBindings()
     }
     
-    private func setupSegmentControl() {
-        segmentControl = UISegmentedControl(items: ["TRY", "USD", "EUR"])
-        segmentControl.selectedSegmentIndex = 0
-        segmentControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
-        segmentControl.translatesAutoresizingMaskIntoConstraints = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel?.fetchCurrency()
+    }
+    
+    private func initBindings() {
+        viewModel?.succesCompletion = { [weak self] success in
+            self?.data = success
+        }
+        viewModel?.failCompleetion = { [weak self]  in
+            //ErrorHandleViewBuilder.showError(from: self)
+        }
+    }
+    
+    private func setupViews() {
         view.addSubview(segmentControl)
-    }
-    
-    private func setupChartView() {
-        barChartView = BarChartView()
-        barChartView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(barChartView)
-    }
-    
-    private func setupStackView() {
-        stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .fillEqually
-        stackView.spacing = 20
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
-    }
-    
-    private func setupTotalAmountView() {
-        totalAmountView = TotalAmountView()
-        totalAmountView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(totalAmountView)
     }
     

@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class ForgotPasswordVC: UIViewController {
+final class ForgotPasswordVC: UIViewController {
     
     private let emailTextField: UITextField = {
         let textField = UITextField()

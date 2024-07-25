@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -102,7 +102,8 @@ class HomeViewController: UIViewController {
         }
         
         @objc func showChart() {
-            let chartVC = IncomeExpenseChartViewController()
+            let viewModel = IncomeExpenseViewModel(networkManager: NetworkManager())
+            let chartVC = IncomeExpenseChartViewController(viewModel: viewModel)
             navigationController?.pushViewController(chartVC, animated: true)
         }
     

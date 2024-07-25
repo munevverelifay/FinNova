@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class VerifyEmailViewController: UIViewController {
+final class VerifyEmailViewController: UIViewController {
     
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
