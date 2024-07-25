@@ -30,6 +30,7 @@
 		F7C749502C51BDDC00E24C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */; };
 		F7C7495A2C51CBFA00E24C2A /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */; };
 		F7C7495C2C51CC5B00E24C2A /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */; };
+		F7C7495E2C51CEF000E24C2A /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495D2C51CEF000E24C2A /* QuoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailViewController.swift; sourceTree = "<group>"; };
 		F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
+		F7C7495D2C51CEF000E24C2A /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				F7C7492B2C5170AA00E24C2A /* FinanceItemView.swift */,
 				F7C749322C5186A900E24C2A /* TotalAmountView.swift */,
+				F7C7495D2C51CEF000E24C2A /* QuoteView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C749502C51BDDC00E24C2A /* LoginViewController.swift in Sources */,
+				F7C7495E2C51CEF000E24C2A /* QuoteView.swift in Sources */,
 				F7C7495A2C51CBFA00E24C2A /* BudgetDetailViewController.swift in Sources */,
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
 				F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */,

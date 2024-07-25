@@ -24,6 +24,12 @@ class HomeViewController: UIViewController {
         return totalAmountView
     }()
     
+    private var quoteView: QuoteView = {
+        let quoteView = QuoteView()
+        quoteView.translatesAutoresizingMaskIntoConstraints = false
+        return quoteView
+    }()
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,6 +58,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(stackView)
         view.addSubview(totalAmountView)
+        view.addSubview(quoteView)
         view.addSubview(tableView)
     }
     
@@ -93,7 +100,12 @@ class HomeViewController: UIViewController {
             totalAmountView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             totalAmountView.heightAnchor.constraint(equalToConstant: 50),
             
-            tableView.topAnchor.constraint(equalTo: totalAmountView.bottomAnchor, constant: 20),
+            quoteView.topAnchor.constraint(equalTo: totalAmountView.bottomAnchor, constant: 20),
+            quoteView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            quoteView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            quoteView.heightAnchor.constraint(equalToConstant: 150),
+            
+            tableView.topAnchor.constraint(equalTo: quoteView.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
