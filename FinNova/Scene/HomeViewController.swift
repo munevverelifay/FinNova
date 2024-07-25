@@ -31,15 +31,16 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
-    private let budgetItems: [(title: String, date: String, amount: String, paymentMethod: String)] = [
-        ("Shopping", "10 Jan 2022", "$544", "In Cash"),
-        ("Restaurant", "11 Jan 2022", "$54,417.80", "Card")
+    private let budgetItems: [(title: String, date: String, amount: String)] = [
+        ("Shopping", "10 Jan 2022", "$544"),
+        ("Restaurant", "11 Jan 2022", "$54,417.80")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Ana Sayfa"
+        navigationItem.hidesBackButton = true
         setupView()
         setupFinanceItemViews()
         setupTotalAmountView()
@@ -93,10 +94,10 @@ class HomeViewController: UIViewController {
             totalAmountView.heightAnchor.constraint(equalToConstant: 50),
             
             tableView.topAnchor.constraint(equalTo: totalAmountView.bottomAnchor, constant: 20),
-                       tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                       tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                       tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-                   ])
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }
 
@@ -113,29 +114,35 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         return "Gelir ve Giderler"
-     }
+        return "Yaklaşan Gelir/Gider"
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-            let footerView = UIView()
-            footerView.backgroundColor = .clear
-            
-            let button = UIButton(type: .system)
-            button.setTitle("Tümünü Gör ->", for: .normal)
-            button.setTitleColor(.systemBlue, for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            
-            footerView.addSubview(button)
-            
-            NSLayoutConstraint.activate([
-                button.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -16),
-                button.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8),
-                button.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -8)
-            ])
-            
-            return footerView
-        }
+        let footerView = UIView()
+        footerView.backgroundColor = .clear
+        
+        let button = UIButton(type: .system)
+        button.setTitle("Tümünü Gör ->", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(showBudgetDetails), for: .touchUpInside)
+        
+        footerView.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -16),
+            button.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8),
+            button.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -8)
+        ])
+        
+        return footerView
+    }
+    
+    @objc private func showBudgetDetails() {
+          let budgetDetailVC = BudgetDetailViewController()
+          navigationController?.pushViewController(budgetDetailVC, animated: true)
+      }
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -144,6 +151,6 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-         return 30
-     }
+        return 30
+    }
 }

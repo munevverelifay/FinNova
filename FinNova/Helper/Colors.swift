@@ -13,4 +13,9 @@ struct Colors {
     static let expenseBackgroundColor = UIColor(red: 230/255, green: 226/255, blue: 230/255, alpha: 1.0)
     static let expenseIconBackgroundColor = UIColor(red: 131/255, green: 111/255, blue: 129/255, alpha: 1.0)
     static let totalBackgroundColor = UIColor(red: 55/255, green: 71/255, blue: 79/255, alpha: 1.0)
+    static let buttonBackgroundColor = UIColor(red: 55/255, green: 71/255, blue: 79/255, alpha: 1.0)
+    static let viewBackgroundColor = UIColor.systemGroupedBackground
+        static let primaryTextColor = UIColor.label
+        static let textFieldBackgroundColor = UIColor.secondarySystemBackground
+        static let textFieldBorderColor = UIColor.lightGray
 }
