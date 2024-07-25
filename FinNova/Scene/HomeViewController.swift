@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
         setupTotalAmountView()
         setupTableView()
         setupConstraints()
+        addTapGestures()
     }
     
     private func setupView() {
@@ -80,6 +81,30 @@ class HomeViewController: UIViewController {
         financeItemView.configure(icon: icon, backgroundColor: backgroundColor, iconBackgroundColor: iconBackgroundColor, amount: amount, title: title)
         return financeItemView
     }
+    
+    private func addTapGestures() {
+            let incomeTapGesture = UITapGestureRecognizer(target: self, action: #selector(showChart))
+            let expenseTapGesture = UITapGestureRecognizer(target: self, action: #selector(showChart))
+            let totalAmountTapGesture = UITapGestureRecognizer(target: self, action: #selector(showChart))
+            
+            if let incomeView = stackView.arrangedSubviews[0] as? FinanceItemView {
+                incomeView.addGestureRecognizer(incomeTapGesture)
+                incomeView.isUserInteractionEnabled = true
+            }
+            
+            if let expenseView = stackView.arrangedSubviews[1] as? FinanceItemView {
+                expenseView.addGestureRecognizer(expenseTapGesture)
+                expenseView.isUserInteractionEnabled = true
+            }
+            
+            totalAmountView.addGestureRecognizer(totalAmountTapGesture)
+            totalAmountView.isUserInteractionEnabled = true
+        }
+        
+        @objc func showChart() {
+            let chartVC = IncomeExpenseChartViewController()
+            navigationController?.pushViewController(chartVC, animated: true)
+        }
     
     private func setupTableView() {
         tableView.dataSource = self

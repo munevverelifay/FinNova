@@ -31,6 +31,8 @@
 		F7C7495A2C51CBFA00E24C2A /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */; };
 		F7C7495C2C51CC5B00E24C2A /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */; };
 		F7C7495E2C51CEF000E24C2A /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495D2C51CEF000E24C2A /* QuoteView.swift */; };
+		F7C749602C51D4FC00E24C2A /* IncomeExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */; };
+		F7C749682C51D71B00E24C2A /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749672C51D71B00E24C2A /* DGCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 		F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailViewController.swift; sourceTree = "<group>"; };
 		F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		F7C7495D2C51CEF000E24C2A /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C749682C51D71B00E24C2A /* DGCharts in Frameworks */,
 				F7C749462C51B4DD00E24C2A /* FirebaseAnalyticsSwift in Frameworks */,
 				F7C749482C51B4DD00E24C2A /* FirebaseAuth in Frameworks */,
 				F7C749442C51B4DD00E24C2A /* FirebaseAnalytics in Frameworks */,
@@ -171,6 +175,7 @@
 				F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */,
 				F7C749212C516F6C00E24C2A /* HomeViewController.swift */,
 				F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */,
+				F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				F7C749432C51B4DD00E24C2A /* FirebaseAnalytics */,
 				F7C749452C51B4DD00E24C2A /* FirebaseAnalyticsSwift */,
 				F7C749472C51B4DD00E24C2A /* FirebaseAuth */,
+				F7C749672C51D71B00E24C2A /* DGCharts */,
 			);
 			productName = FinNova;
 			productReference = F7C748EE2C516EC400E24C2A /* FinNova.app */;
@@ -344,6 +350,7 @@
 			mainGroup = F7C748E52C516EC400E24C2A;
 			packageReferences = (
 				F7C749422C51B4DD00E24C2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F7C749662C51D71B00E24C2A /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = F7C748EF2C516EC400E24C2A /* Products */;
 			projectDirPath = "";
@@ -398,6 +405,7 @@
 				F7C749412C51B43700E24C2A /* FirebaseAuthManager.swift in Sources */,
 				F7C749382C51971B00E24C2A /* RegisterViewController.swift in Sources */,
 				F7C748F42C516EC400E24C2A /* SceneDelegate.swift in Sources */,
+				F7C749602C51D4FC00E24C2A /* IncomeExpenseViewController.swift in Sources */,
 				F7C7494C2C51BC9D00E24C2A /* VerifyEmailViewController.swift in Sources */,
 				F7C749332C5186A900E24C2A /* TotalAmountView.swift in Sources */,
 				F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */,
@@ -749,6 +757,14 @@
 				minimumVersion = 10.29.0;
 			};
 		};
+		F7C749662C51D71B00E24C2A /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -766,6 +782,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F7C749422C51B4DD00E24C2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		F7C749672C51D71B00E24C2A /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7C749662C51D71B00E24C2A /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
