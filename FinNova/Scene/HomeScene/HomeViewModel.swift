@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeViewModel {
     var succesCompletion: ((Quotes) -> Void)?
-    var failCompleetion: (() -> Void)?
+    var failCompletion: (() -> Void)?
     
     var networkManager: NetworkManagerInterface?
     
@@ -28,7 +28,7 @@ final class HomeViewModel {
         case .success(let success):
             self.succesCompletion?(success)
         case .failure(_):
-            self.failCompleetion?()
+            self.failCompletion?()
         }
     }
 }

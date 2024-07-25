@@ -106,7 +106,7 @@ final class IncomeExpenseChartViewController: UIViewController {
             }
         }
         
-        viewModel?.failCompleetion = { [weak self] in
+        viewModel?.failCompletion = { [weak self] in
             DispatchQueue.main.async {
                      // ErrorHandleViewBuilder.showError(from: self)
                  }

@@ -15,7 +15,7 @@ protocol CoreNetworkManagerInterface {
 public final class CoreNetworkManager: CoreNetworkManagerInterface {
     
     public init() {}
-    //model bağımsız generic bir request fonlsiyonu
+    //model bağımsız generic bir request fonksiyonu
     func request<T: Codable>(_ endpoint: Endpoint, completion: @escaping (Result<T, ErrorTypes>) -> Void) {
         let task = URLSession.shared.dataTask(with: endpoint.request()) { data, response, error in
             var result: Result<T, ErrorTypes> = .failure(.generalError)
@@ -29,13 +29,13 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
                 return
             }
             
-            guard let response = response as? HTTPURLResponse else { //responseun optionallığını, oluşuğ oluşmadığını kontrol ettim.
+            guard let response = response as? HTTPURLResponse else {
                 result = .failure(.generalError)
                 return
             }
             
             switch response.statusCode {
-            case 200...299: // genel ok
+            case 200...299:
                 self.handleResponse(data: data) { response in
                     result = response
                 }
@@ -47,7 +47,7 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
                 result = .failure(.generalError)
             }
         }
-        task.resume() // taskı biti?
+        task.resume()
     }
     
     // MARK: Handle func
@@ -57,7 +57,7 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
             return
         }
         
-        do { // önde do sonra hata olursa catch
+        do {
             let successData = try JSONDecoder().decode(T.self, from: data)
             completion(.success(successData))
             print("""
@@ -65,7 +65,6 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
                     \(Date())
                   -->
                     \(successData)
-
                   """)
         } catch {
             print(error)
@@ -79,7 +78,7 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
         switch T.self {
         case is Quotes.Type:
             fileName = "QuoteMockData"
-        case is BudgetItem.Type:
+        case is [BudgetItem].Type:
             fileName = "IncomeExpenseMockData"
         default:
             break
@@ -118,3 +117,4 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
         }
     }
 }
+

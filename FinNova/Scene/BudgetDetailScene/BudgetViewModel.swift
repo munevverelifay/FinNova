@@ -8,8 +8,8 @@
 import Foundation
 
 final class BudgetsViewModel {
-    var succesCompletion: ((BudgetItem) -> Void)?
-    var failCompleetion: (() -> Void)?
+    var succesCompletion: (([BudgetItem]) -> Void)?
+    var failCompletion: (() -> Void)?
     
     var networkManager: NetworkManagerInterface?
     
@@ -23,12 +23,12 @@ final class BudgetsViewModel {
         })
     }
     
-    func handleResponse(response: Result<BudgetItem, ErrorTypes>) {
+    func handleResponse(response: Result<[BudgetItem], ErrorTypes>) {
         switch response {
         case .success(let success):
             self.succesCompletion?(success)
         case .failure(_):
-            self.failCompleetion?()
+            self.failCompletion?()
         }
     }
 }

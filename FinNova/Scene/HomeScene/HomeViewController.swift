@@ -88,7 +88,7 @@ final class HomeViewController: UIViewController {
             self.updateQuoteView(withTitle: data[randomNumber].quote ?? "", description: data[randomNumber].author ?? "")
         }
 
-        viewModel?.failCompleetion = { [weak self] in
+        viewModel?.failCompletion = { [weak self] in
             DispatchQueue.main.async {
                      // ErrorHandleViewBuilder.showError(from: self)
                  }

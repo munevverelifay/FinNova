@@ -9,7 +9,7 @@ import UIKit
 
 final class BudgetDetailViewController: UITableViewController {
 
-    var data: BudgetItem?
+    var data: [BudgetItem] = []
     var viewModel: BudgetsViewModel?
     var budgetItems: [BudgetItem] = []
     var groupedBudgetItems: [String: [BudgetItem]] = [:]
@@ -28,7 +28,6 @@ final class BudgetDetailViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Gelir/Giderler"
         tableView.register(BudgetItemCell.self, forCellReuseIdentifier: "BudgetItemCell")
-        loadBudgetItems()
         initBindings()
     }
     
@@ -38,35 +37,17 @@ final class BudgetDetailViewController: UITableViewController {
     
     private func initBindings() {
         viewModel?.succesCompletion = { [weak self] success in
-            self?.data = success
-            print(success)
+            self?.budgetItems = success
+            self?.groupBudgetItemsByDate()
+            self?.tableView.reloadData()
         }
-        viewModel?.failCompleetion = { [weak self] in
+        viewModel?.failCompletion = { [weak self] in
             DispatchQueue.main.async {
-                     // ErrorHandleViewBuilder.showError(from: self)
-                 }
-            //ErrorHandleViewBuilder.showError(from: self)
+                // Error handling
+            }
         }
     }
 
-    private func loadBudgetItems() {
-        let jsonString = """
-        [
-            {"title": "Shopping", "date": "10 Jan 2022", "amount": "$544"},
-            {"title": "Restaurant", "date": "11 Jan 2022", "amount": "$54,417.80"},
-            {"title": "dfwdf", "date": "fe Jan 2022", "amount": "$dflsöf.80"}
-        ]
-        """
-        
-        let jsonData = Data(jsonString.utf8)
-        do {
-            budgetItems = try JSONDecoder().decode([BudgetItem].self, from: jsonData)
-            groupBudgetItemsByDate()
-            tableView.reloadData()
-        } catch {
-            print("Failed to decode JSON")
-        }
-    }
 
     private func groupBudgetItemsByDate() {
         groupedBudgetItems = Dictionary(grouping: budgetItems, by: { $0.date })
@@ -98,7 +79,13 @@ final class BudgetDetailViewController: UITableViewController {
         let date = sortedDates[indexPath.section]
         if let items = groupedBudgetItems[date] {
             let item = items[indexPath.row]
-            cell.configure(title: item.type, date: item.date, amount: item.amount)
+            var amount = item.amount
+            if item.type == "income" {
+                amount = "+\(item.amount)"
+            } else if item.type == "expense" {
+                amount = "-\(item.amount)"
+            }
+            cell.configure(title: item.source, date: item.date, amount: amount)
         }
         return cell
     }
