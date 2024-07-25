@@ -92,7 +92,7 @@ class QuoteView: UIView {
             
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: iconContainerView.leadingAnchor, constant: -15),
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
             
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: iconContainerView.leadingAnchor, constant: -15),

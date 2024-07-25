@@ -6,9 +6,12 @@
 //
 
 import Foundation
-//öylesine deneme
+
 struct BudgetItem: Decodable {
-    let title: String
+    let userId: String
     let date: String
+    let type: String
+    let source: String
     let amount: String
+    let currency: String
 }

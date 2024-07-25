@@ -69,7 +69,7 @@ final class BudgetDetailViewController: UITableViewController {
         let date = sortedDates[indexPath.section]
         if let items = groupedBudgetItems[date] {
             let item = items[indexPath.row]
-            cell.configure(title: item.title, date: item.date, amount: item.amount)
+            cell.configure(title: item.type, date: item.date, amount: item.amount)
         }
         return cell
     }

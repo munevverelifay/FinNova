@@ -1,0 +1,50 @@
+[
+  {
+    "userId": "user_001",
+    "date": "2024-07-24",
+    "type": "income",
+    "source": "salary",
+    "amount": "3000",
+    "currency": "USD"
+  },
+  {
+    "userId": "user_001",
+    "date": "2024-07-25",
+    "type": "expense",
+    "source": "service fee",
+    "amount": "50",
+    "currency": "USD"
+  },
+  {
+    "userId": "user_002",
+    "date": "2024-07-23",
+    "type": "income",
+    "source": "freelance",
+    "amount": "1500",
+    "currency": "USD"
+  },
+  {
+    "userId": "user_002",
+    "date": "2024-07-24",
+    "type": "expense",
+    "source": "groceries",
+    "amount": "200",
+    "currency": "USD"
+  },
+  {
+    "userId": "user_003",
+    "date": "2024-07-22",
+    "type": "income",
+    "source": "bank transfer",
+    "amount": "1000",
+    "currency": "USD"
+  },
+  {
+    "userId": "user_003",
+    "date": "2024-07-23",
+    "type": "expense",
+    "source": "utilities",
+    "amount": "100",
+    "currency": "USD"
+  }
+]

@@ -64,8 +64,8 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupFinanceItemViews() {
-        let incomeView = createFinanceItemView(icon: .incomeIcon, backgroundColor: Colors.incomeBackgroundColor, iconBackgroundColor: Colors.incomeIconBackgroundColor, amount: 1800.0, title: "Income")
-        let expenseView = createFinanceItemView(icon: .expenseIcon, backgroundColor: Colors.expenseBackgroundColor, iconBackgroundColor: Colors.expenseIconBackgroundColor, amount: 1800.0, title: "Expense")
+        let incomeView = createFinanceItemView(icon: .incomeIcon, backgroundColor: Colors.incomeBackgroundColor, iconBackgroundColor: Colors.incomeIconBackgroundColor, amount: 1800.0, title: "Gelir")
+        let expenseView = createFinanceItemView(icon: .expenseIcon, backgroundColor: Colors.expenseBackgroundColor, iconBackgroundColor: Colors.expenseIconBackgroundColor, amount: 1800.0, title: "Gider")
         
         stackView.addArrangedSubview(incomeView)
         stackView.addArrangedSubview(expenseView)

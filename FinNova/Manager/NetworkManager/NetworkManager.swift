@@ -9,6 +9,7 @@ import Foundation
 
 protocol NetworkManagerInterface {
     func getCurrency(completion: @escaping (Result<Currency, ErrorTypes>) -> Void)
+    func getQuotes(completion: @escaping (Result<Quotes, ErrorTypes>) -> Void)
 }
 
 class NetworkManager: NetworkManagerInterface {
@@ -17,5 +18,9 @@ class NetworkManager: NetworkManagerInterface {
     func getCurrency(completion: @escaping (Result<Currency, ErrorTypes>) -> Void) {
         let endopoint = Endpoint.getCurrency
         networkManager.request(endopoint, completion: completion)
+    }
+    
+    func getQuotes(completion: @escaping (Result<Quotes, ErrorTypes>) -> Void) {
+        networkManager.readMock(completion: completion)
     }
 }

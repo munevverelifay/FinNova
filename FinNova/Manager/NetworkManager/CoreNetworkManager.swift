@@ -9,6 +9,7 @@ import Foundation
 
 protocol CoreNetworkManagerInterface {
     func request<T: Codable>(_ endpoint: Endpoint,completion: @escaping((Result<T,ErrorTypes>)->()))
+    func readMock<T: Codable>(completion: @escaping (Result<T,ErrorTypes>)->())
 }
 
 public final class CoreNetworkManager: CoreNetworkManagerInterface {
@@ -71,37 +72,49 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
             completion(.failure(.parsingError))
         }
     }
-}
-
-class MockSercvice {
-    func get(completion: @escaping (Result<jsonModel,Error>) -> Void) {
+    
+    func readMock<T: Codable>(completion: @escaping (Result<T,ErrorTypes>) -> Void) {
+        var fileName = ""
         
-        guard let data = MockJsonParser.shared.request(jsonStr: json1, model: jsonModel.self) else {
-            completion(.failure(NSError.init()))
+        switch T.self {
+        case is Quotes.Type:
+            fileName = "QuoteMockData"
+//        case is DigerModel.Type:
+            //fileName = "DigerMockAdı"
+        default:
+            break
+        }
+        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            completion(.failure(.fileNotFound))
             return
         }
-        completion(.success(data))
-    }
-}
-
-class MockJsonParser {
-
-    static let shared = MockJsonParser()
-
-    func request<T: Codable>(jsonStr: String, model: T.Type) -> T?{
-        guard let data = jsonStr.data(using: .utf8) else {
-            return nil
+        do {
+            let data = try Data(contentsOf: url)
+            handleMockResponse(data: data, model: T.self, completion: completion)
+        } catch {
+            completion(.failure(.parsingError))
         }
-        return try? JSONDecoder().decode(T.self, from: data)
     }
-}
-
-let json1 = """
-{
-    "str": "Örnek metin"
-}
-"""
-
-struct jsonModel: Codable {
-    let str: String?
+    
+    private func handleMockResponse<T: Codable>(data: Data?, model: T.Type, completion: @escaping ((Result<T, ErrorTypes>) -> ())) {
+        guard let data = data else {
+            //completion(.failure(.emptyData))
+            return
+        }
+        
+        do {
+            let successData = try JSONDecoder().decode(model, from: data)
+            completion(.success(successData))
+            print("""
+                  Response: ->
+                    \(Date())
+                  -->
+                    \(successData)
+                  """)
+        } catch {
+            print(error)
+            completion(.failure(.parsingError))
+        }
+    }
 }

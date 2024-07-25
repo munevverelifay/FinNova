@@ -17,4 +17,5 @@ public enum ErrorTypes: String, Error {
     case redirectionError300 = "Redirection Error 300's"
     case clientError400 = "Client Error 400's "
     case serverError500 = "Server Error 500's"
+    case fileNotFound = "File Not Found"
 }
