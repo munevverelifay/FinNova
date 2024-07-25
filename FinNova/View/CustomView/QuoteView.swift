@@ -41,7 +41,8 @@ class QuoteView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.textColor = .black
-        label.text = "Create a Saving goal"
+        label.numberOfLines = 0
+        label.text = "Finansal özgürlük, hayatınızı nasıl yaşayacağınıza karar verme özgürlüğüdür."
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,7 +51,7 @@ class QuoteView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = .gray
-        label.text = "Lorem ipsum dolor sit amet cdgvsıjnkmocjoefje efkmkfecmkefmvepl pdcllwölölwöfr kpmcfkplmöwdlöcw"
+        label.text = "Suze Orman"
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -95,8 +96,7 @@ class QuoteView: UIView {
             
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: iconContainerView.leadingAnchor, constant: -15),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6),
-            descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6)
         
         ])
     }

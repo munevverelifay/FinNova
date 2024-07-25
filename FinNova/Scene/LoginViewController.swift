@@ -113,12 +113,12 @@ final class LoginViewController: UIViewController {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.width * 0.037),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width * 0.037),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            emailTextField.heightAnchor.constraint(equalToConstant: 44),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 44),
-            loginButton.heightAnchor.constraint(equalToConstant: 44)
+            emailTextField.heightAnchor.constraint(equalToConstant: view.frame.height * 0.055),
+            passwordTextField.heightAnchor.constraint(equalToConstant:view.frame.height * 0.055),
+            loginButton.heightAnchor.constraint(equalToConstant: view.frame.height * 0.055)
         ])
     }
     
