@@ -9,6 +9,9 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
+    var data: Quotes?
+    var viewModel: HomeViewModel?
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -42,6 +45,15 @@ final class HomeViewController: UIViewController {
         ("Restaurant", "11 Jan 2022", "$54,417.80")
     ]
     
+    init(viewModel: HomeViewModel? = nil) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +65,42 @@ final class HomeViewController: UIViewController {
         setupTableView()
         setupConstraints()
         addTapGestures()
+        initBindings()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel?.fetchQuotes()
+    }
+    
+    private func initBindings() {
+        viewModel?.succesCompletion = { [weak self] success in
+            guard let self = self else { return }
+            self.data = success
+            
+            // data dizisi boşsa veya nil ise işlemi durdur
+            guard let data = self.data, !data.isEmpty else {
+                return
+            }
+            
+            let randomNumber = Int.random(in: 0..<data.count) // 0 ile data.count arasında rastgele bir sayı alınır
+            
+            self.updateQuoteView(withTitle: data[randomNumber].quote ?? "", description: data[randomNumber].author ?? "")
+        }
+
+        viewModel?.failCompleetion = { [weak self] in
+            DispatchQueue.main.async {
+                     // ErrorHandleViewBuilder.showError(from: self)
+                 }
+            //ErrorHandleViewBuilder.showError(from: self)
+        }
+    }
+    
+    func updateQuoteView(withTitle title: String, description: String) {
+        // QuoteView'i güncellemek için update fonksiyonunu kullanın
+        self.quoteView.updateQuote(withTitle: title, description: description)
+    }
+
     
     private func setupView() {
         view.backgroundColor = .white
@@ -178,8 +225,9 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     @objc private func showBudgetDetails() {
-          let budgetDetailVC = BudgetDetailViewController()
-          navigationController?.pushViewController(budgetDetailVC, animated: true)
+        let vm = BudgetsViewModel(networkManager: NetworkManager())
+        let budgetDetailVC = BudgetDetailViewController(viewModel: vm)
+        navigationController?.pushViewController(budgetDetailVC, animated: true)
       }
 }
 

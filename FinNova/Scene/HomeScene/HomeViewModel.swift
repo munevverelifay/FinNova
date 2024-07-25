@@ -1,5 +1,5 @@
 //
-//  IncomeExpenseViewModel.swift
+//  HomeViewModel.swift
 //  FinNova
 //
 //  Created by Münevver Elif Ay on 25.07.2024.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class IncomeExpenseViewModel {
-    var succesCompletion: ((Currency) -> Void)?
+final class HomeViewModel {
+    var succesCompletion: ((Quotes) -> Void)?
     var failCompleetion: (() -> Void)?
     
     var networkManager: NetworkManagerInterface?
@@ -17,13 +17,13 @@ final class IncomeExpenseViewModel {
         self.networkManager = networkManager
     }
     
-    func fetchCurrency() {
-        networkManager?.getCurrency(completion: { response in
+    func fetchQuotes() {
+        networkManager?.getQuotes(completion: { response in
             self.handleResponse(response: response)
         })
     }
     
-    func handleResponse(response: Result<Currency, ErrorTypes>) {
+    func handleResponse(response: Result<Quotes, ErrorTypes>) {
         switch response {
         case .success(let success):
             self.succesCompletion?(success)
@@ -32,4 +32,3 @@ final class IncomeExpenseViewModel {
         }
     }
 }
-

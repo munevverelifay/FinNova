@@ -147,7 +147,6 @@ final class IncomeExpenseChartViewController: UIViewController {
         // stackView içindeki view'leri kaldır
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
-        // Yeni incomeView ve expenseView oluştur
         let incomeView = createFinanceItemView(icon: UIImage(named: "incomeIcon"), backgroundColor: Colors.incomeBackgroundColor, iconBackgroundColor: Colors.incomeIconBackgroundColor, amount: selectedIncomeValue, title: "Gelir")
         
         let expenseView = createFinanceItemView(icon: UIImage(named: "expenseIcon"), backgroundColor: Colors.expenseBackgroundColor, iconBackgroundColor: Colors.expenseIconBackgroundColor, amount: -selectedExpenseValue, title: "Gider")

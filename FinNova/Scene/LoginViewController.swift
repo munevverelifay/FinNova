@@ -147,7 +147,8 @@ final class LoginViewController: UIViewController {
                 } else {
                     UserDefaults.standard.removeObject(forKey: "rememberedEmail")
                 }
-                let homeVC = HomeViewController()
+                let vm = HomeViewModel(networkManager: NetworkManager())
+                let homeVC = HomeViewController(viewModel: vm)
                 self.navigationController?.pushViewController(homeVC, animated: true)
             } else {
                 self.displayErrorMessage(error ?? "There was an error.")

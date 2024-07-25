@@ -79,8 +79,8 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
         switch T.self {
         case is Quotes.Type:
             fileName = "QuoteMockData"
-//        case is DigerModel.Type:
-            //fileName = "DigerMockAdı"
+        case is BudgetItem.Type:
+            fileName = "IncomeExpenseMockData"
         default:
             break
         }
@@ -99,7 +99,7 @@ public final class CoreNetworkManager: CoreNetworkManagerInterface {
     
     private func handleMockResponse<T: Codable>(data: Data?, model: T.Type, completion: @escaping ((Result<T, ErrorTypes>) -> ())) {
         guard let data = data else {
-            //completion(.failure(.emptyData))
+            completion(.failure(.emptyData))
             return
         }
         

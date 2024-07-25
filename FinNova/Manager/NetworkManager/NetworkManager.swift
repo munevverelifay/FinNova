@@ -10,6 +10,7 @@ import Foundation
 protocol NetworkManagerInterface {
     func getCurrency(completion: @escaping (Result<Currency, ErrorTypes>) -> Void)
     func getQuotes(completion: @escaping (Result<Quotes, ErrorTypes>) -> Void)
+    func getBudgets(completion: @escaping (Result<BudgetItem, ErrorTypes>) -> Void)
 }
 
 class NetworkManager: NetworkManagerInterface {
@@ -21,6 +22,10 @@ class NetworkManager: NetworkManagerInterface {
     }
     
     func getQuotes(completion: @escaping (Result<Quotes, ErrorTypes>) -> Void) {
+        networkManager.readMock(completion: completion)
+    }
+    
+    func getBudgets(completion: @escaping (Result<BudgetItem, ErrorTypes>) -> Void) {
         networkManager.readMock(completion: completion)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BudgetItem: Decodable {
+struct BudgetItem: Codable {
     let userId: String
     let date: String
     let type: String
@@ -15,3 +15,4 @@ struct BudgetItem: Decodable {
     let amount: String
     let currency: String
 }
+

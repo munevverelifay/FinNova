@@ -72,6 +72,12 @@ class QuoteView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+     func updateQuote(withTitle title: String, description: String) {
+         titleLabel.text = title
+         descriptionLabel.text = description
+     }
+    
     private func setupViews() {
         self.addSubview(iconContainerView)
         iconContainerView.addSubview(iconImageView)

@@ -24,7 +24,6 @@
 		F7C749442C51B4DD00E24C2A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749432C51B4DD00E24C2A /* FirebaseAnalytics */; };
 		F7C749462C51B4DD00E24C2A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749452C51B4DD00E24C2A /* FirebaseAnalyticsSwift */; };
 		F7C749482C51B4DD00E24C2A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749472C51B4DD00E24C2A /* FirebaseAuth */; };
-		F7C7494A2C51BC0D00E24C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7C749492C51BC0D00E24C2A /* GoogleService-Info.plist */; };
 		F7C7494C2C51BC9D00E24C2A /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7494B2C51BC9D00E24C2A /* VerifyEmailViewController.swift */; };
 		F7C7494E2C51BCF800E24C2A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7494D2C51BCF800E24C2A /* ForgotPasswordViewController.swift */; };
 		F7C749502C51BDDC00E24C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */; };
@@ -44,6 +43,9 @@
 		F7D0DB5C2C52234600848C49 /* IncomeExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB5B2C52234600848C49 /* IncomeExpenseViewModel.swift */; };
 		F7D0DB5E2C52360B00848C49 /* IncomeExpenseMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = F7D0DB5D2C52360B00848C49 /* IncomeExpenseMockData.json */; };
 		F7D0DB612C52424600848C49 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB602C52424600848C49 /* Quote.swift */; };
+		F7D0DB652C5252EB00848C49 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB642C5252EB00848C49 /* HomeViewModel.swift */; };
+		F7D0DB672C5254E900848C49 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0DB662C5254E900848C49 /* BudgetViewModel.swift */; };
+		F7D0DB692C52581C00848C49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7D0DB682C52581C00848C49 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +84,6 @@
 		F7C749352C518E6D00E24C2A /* BudgetItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItemCell.swift; sourceTree = "<group>"; };
 		F7C749372C51971B00E24C2A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F7C749402C51B43700E24C2A /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
-		F7C749492C51BC0D00E24C2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7C7494B2C51BC9D00E24C2A /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		F7C7494D2C51BCF800E24C2A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +102,9 @@
 		F7D0DB5B2C52234600848C49 /* IncomeExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewModel.swift; sourceTree = "<group>"; };
 		F7D0DB5D2C52360B00848C49 /* IncomeExpenseMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IncomeExpenseMockData.json; sourceTree = "<group>"; };
 		F7D0DB602C52424600848C49 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		F7D0DB642C5252EB00848C49 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F7D0DB662C5254E900848C49 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
+		F7D0DB682C52581C00848C49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,14 +165,12 @@
 				F7C749272C516FEB00E24C2A /* Manager */,
 				F7D0DB532C52229700848C49 /* Enums */,
 				F7C7492D2C517FC400E24C2A /* Helper */,
-				F7C749562C51C13300E24C2A /* Extensions */,
-				F7D0DB482C521F3200848C49 /* MockData */,
 				F7C748F12C516EC400E24C2A /* AppDelegate.swift */,
 				F7C748F32C516EC400E24C2A /* SceneDelegate.swift */,
 				F7C748FA2C516EC600E24C2A /* Assets.xcassets */,
 				F7C748FC2C516EC600E24C2A /* LaunchScreen.storyboard */,
 				F7C748FF2C516EC600E24C2A /* Info.plist */,
-				F7C749492C51BC0D00E24C2A /* GoogleService-Info.plist */,
+				F7D0DB682C52581C00848C49 /* GoogleService-Info.plist */,
 			);
 			path = FinNova;
 			sourceTree = "<group>";
@@ -197,7 +199,7 @@
 				F7C7494B2C51BC9D00E24C2A /* VerifyEmailViewController.swift */,
 				F7C7494D2C51BCF800E24C2A /* ForgotPasswordViewController.swift */,
 				F7C7494F2C51BDDC00E24C2A /* LoginViewController.swift */,
-				F7C749212C516F6C00E24C2A /* HomeViewController.swift */,
+				F7D0DB632C5252D600848C49 /* HomeScene */,
 				F7D0DB622C52520700848C49 /* BudgetDetailScene */,
 				F7D0DB5A2C52231F00848C49 /* IncomeExpenseScene */,
 			);
@@ -247,6 +249,7 @@
 				F7D0DB4D2C52225000848C49 /* NetworkManager.swift */,
 				F7D0DB4F2C52226000848C49 /* NetworkHelper.swift */,
 				F7D0DB582C52230200848C49 /* QuoteMockData.json */,
+				F7D0DB5D2C52360B00848C49 /* IncomeExpenseMockData.json */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -278,21 +281,6 @@
 			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
-		F7C749562C51C13300E24C2A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F7D0DB482C521F3200848C49 /* MockData */ = {
-			isa = PBXGroup;
-			children = (
-				F7D0DB5D2C52360B00848C49 /* IncomeExpenseMockData.json */,
-			);
-			path = MockData;
-			sourceTree = "<group>";
-		};
 		F7D0DB532C52229700848C49 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,8 +303,18 @@
 			isa = PBXGroup;
 			children = (
 				F7C749592C51CBFA00E24C2A /* BudgetDetailViewController.swift */,
+				F7D0DB662C5254E900848C49 /* BudgetViewModel.swift */,
 			);
 			path = BudgetDetailScene;
+			sourceTree = "<group>";
+		};
+		F7D0DB632C5252D600848C49 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				F7C749212C516F6C00E24C2A /* HomeViewController.swift */,
+				F7D0DB642C5252EB00848C49 /* HomeViewModel.swift */,
+			);
+			path = HomeScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +435,7 @@
 				F7D0DB5E2C52360B00848C49 /* IncomeExpenseMockData.json in Resources */,
 				F7C748FB2C516EC600E24C2A /* Assets.xcassets in Resources */,
 				F7C748FE2C516EC600E24C2A /* Base in Resources */,
-				F7C7494A2C51BC0D00E24C2A /* GoogleService-Info.plist in Resources */,
+				F7D0DB692C52581C00848C49 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +466,7 @@
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
 				F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */,
 				F7D0DB5C2C52234600848C49 /* IncomeExpenseViewModel.swift in Sources */,
+				F7D0DB672C5254E900848C49 /* BudgetViewModel.swift in Sources */,
 				F7D0DB4C2C52223A00848C49 /* CoreNetworkManager.swift in Sources */,
 				F7D0DB522C52228100848C49 /* Currency.swift in Sources */,
 				F7C7494E2C51BCF800E24C2A /* ForgotPasswordViewController.swift in Sources */,
@@ -483,6 +482,7 @@
 				F7C749332C5186A900E24C2A /* TotalAmountView.swift in Sources */,
 				F7C7492C2C5170AA00E24C2A /* FinanceItemView.swift in Sources */,
 				F7C749222C516F6C00E24C2A /* HomeViewController.swift in Sources */,
+				F7D0DB652C5252EB00848C49 /* HomeViewModel.swift in Sources */,
 				F7D0DB572C5222DA00848C49 /* HTTPMethod.swift in Sources */,
 				F7D0DB3C2C52188D00848C49 /* Fonts.swift in Sources */,
 				F7D0DB552C5222AA00848C49 /* ErrorTypes.swift in Sources */,

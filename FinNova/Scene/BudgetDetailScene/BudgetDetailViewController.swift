@@ -9,15 +9,44 @@ import UIKit
 
 final class BudgetDetailViewController: UITableViewController {
 
+    var data: BudgetItem?
+    var viewModel: BudgetsViewModel?
     var budgetItems: [BudgetItem] = []
     var groupedBudgetItems: [String: [BudgetItem]] = [:]
     var sortedDates: [String] = []
-
+    
+    init(viewModel: BudgetsViewModel? = nil) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Gelir/Giderler"
         tableView.register(BudgetItemCell.self, forCellReuseIdentifier: "BudgetItemCell")
         loadBudgetItems()
+        initBindings()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel?.fetchBudgets()
+    }
+    
+    private func initBindings() {
+        viewModel?.succesCompletion = { [weak self] success in
+            self?.data = success
+            print(success)
+        }
+        viewModel?.failCompleetion = { [weak self] in
+            DispatchQueue.main.async {
+                     // ErrorHandleViewBuilder.showError(from: self)
+                 }
+            //ErrorHandleViewBuilder.showError(from: self)
+        }
     }
 
     private func loadBudgetItems() {
