@@ -159,8 +159,8 @@ extension HomeViewController: UITableViewDataSource {
         footerView.backgroundColor = .clear
         
         let button = UIButton(type: .system)
-        button.setTitle("Tümünü Gör ->", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Tümünü Gör →", for: .normal)
+        button.setTitleColor(Colors.primaryColor , for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(showBudgetDetails), for: .touchUpInside)

@@ -11,19 +11,19 @@ class QuoteView: UIView {
     
     private let iconContainerView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 40
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.masksToBounds = true
         view.backgroundColor = UIColor.clear
-        view.layer.insertSublayer(getGradientLayer(bounds: CGRect(x: 0, y: 0, width: 50, height: 50)), at: 0)
+        view.layer.insertSublayer(getGradientLayer(bounds: CGRect(x: 0, y: 0, width: 80, height: 80)), at: 0)
         return view
     }()
     
     private static func getGradientLayer(bounds: CGRect) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [UIColor(red: 99/255, green: 119/255, blue: 130/255, alpha: 1).cgColor,
-                           UIColor(red: 129/255, green: 178/255, blue: 202/255, alpha: 1).cgColor]
+        gradient.colors = [Colors.primaryColor.cgColor,
+                           Colors.secondaryColor.cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
         return gradient
@@ -79,15 +79,15 @@ class QuoteView: UIView {
         
         NSLayoutConstraint.activate([
             
-            iconContainerView.widthAnchor.constraint(equalToConstant: 60),
-            iconContainerView.heightAnchor.constraint(equalToConstant: 60),
+            iconContainerView.widthAnchor.constraint(equalToConstant: 80),
+            iconContainerView.heightAnchor.constraint(equalToConstant: 80),
             iconContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             iconContainerView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
             iconImageView.centerXAnchor.constraint(equalTo: iconContainerView.centerXAnchor),
             iconImageView.centerYAnchor.constraint(equalTo: iconContainerView.centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 40),
-            iconImageView.heightAnchor.constraint(equalToConstant: 40),
+            iconImageView.widthAnchor.constraint(equalToConstant: 50),
+            iconImageView.heightAnchor.constraint(equalToConstant: 50),
             
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: iconContainerView.leadingAnchor, constant: -15),

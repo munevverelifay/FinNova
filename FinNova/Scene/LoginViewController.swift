@@ -5,144 +5,6 @@
 //  Created by Münevver Elif Ay on 25.07.2024.
 //
 
-//import UIKit
-//
-//class LoginViewController: UIViewController {
-//    
-//    internal let emailTextField: UITextField = {
-//        let textField = UITextField()
-//        textField.placeholder = "Enter your email"
-//        textField.backgroundColor = .white
-//        textField.autocapitalizationType = .none
-//        textField.autocorrectionType = .no
-//        textField.borderStyle = .roundedRect
-//        return textField
-//    }()
-//    
-//    private let passwordTextField: UITextField = {
-//        let textField = UITextField()
-//        textField.placeholder = "Enter your password"
-//        textField.backgroundColor = .white
-//        textField.autocapitalizationType = .none
-//        textField.autocorrectionType = .no
-//        textField.borderStyle = .roundedRect
-//        textField.isSecureTextEntry = true
-//        return textField
-//    }()
-//    
-//    private let loginButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.backgroundColor = .systemBlue
-//        button.setTitle("Login", for: .normal)
-//        button.setTitleColor(.white, for: .normal)
-//        button.layer.cornerRadius = 15
-//        button.addTarget(LoginViewController.self, action: #selector(loginButtonTapped), for: .touchUpInside)
-//        return button
-//    }()
-//    
-//    private let registerLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = "Don't have an account? Register"
-//        label.textColor = .link
-//        label.textAlignment = .center
-//        label.isUserInteractionEnabled = true
-//        label.addGestureRecognizer(UITapGestureRecognizer(target: LoginViewController.self, action: #selector(registerLabelTapped)))
-//        return label
-//    }()
-//    
-//    private let stackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        stackView.distribution = .fill
-//        stackView.spacing = 30
-//        return stackView
-//    }()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        setupUI()
-//    }
-//    
-//    private func setupUI() {
-//        self.view.backgroundColor = .white
-//        
-//        view.addSubview(stackView)
-//        
-//        NSLayoutConstraint.activate([
-//            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-//            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
-//        
-//        stackView.addArrangedSubview(emailTextField)
-//        stackView.addArrangedSubview(passwordTextField)
-//        stackView.addArrangedSubview(loginButton)
-//        stackView.addArrangedSubview(registerLabel)
-//        
-//        emailTextField.delegate = self
-//        passwordTextField.delegate = self
-//        
-//        NSLayoutConstraint.activate([
-//            emailTextField.heightAnchor.constraint(equalToConstant: 44),
-//            passwordTextField.heightAnchor.constraint(equalToConstant: 44),
-//            loginButton.heightAnchor.constraint(equalToConstant: 44)
-//        ])
-//    }
-//    
-//    @objc private func loginButtonTapped() {
-//        let loginManager = FirebaseAuthManager()
-//        
-//        guard let email = emailTextField.text, !email.isEmpty,
-//              let password = passwordTextField.text, !password.isEmpty else {
-//            displayErrorMessage("Please fill in all fields.")
-//            return
-//        }
-//        
-//        loginManager.loginUserWithEmailAndPassword(email: email, password: password) { [weak self] (success, error) in
-//            guard let self = self else { return }
-//            if success {
-//                print("User logged in successfully")
-//                // Proceed to the next screen or show success message
-//            } else {
-//                self.displayErrorMessage(error ?? "There was an error.")
-//            }
-//        }
-//    }
-//    
-//    @objc private func registerLabelTapped() {
-//        let registerVC = RegisterViewController()
-//        navigationController?.pushViewController(registerVC, animated: true)
-//    }
-//    
-//    internal func displayErrorMessage(_ message: String) {
-//        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//    }
-//}
-//
-//extension LoginViewController: UITextFieldDelegate {
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        if textField == emailTextField {
-//            if isValidEmail(email: textField.text ?? "") {
-//                print("Valid email address")
-//            } else {
-//                print("Invalid email address")
-//                displayErrorMessage("Invalid email format")
-//            }
-//        }
-//    }
-//    
-//    func isValidEmail(email: String) -> Bool {
-//        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-//        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-//        return emailPredicate.evaluate(with: email)
-//    }
-//}
-//
-//
-
 import UIKit
 
 final class LoginViewController: UIViewController {
@@ -151,7 +13,7 @@ final class LoginViewController: UIViewController {
         let titleLabel = UILabel()
         titleLabel.text = "Giriş Yap"
         titleLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        titleLabel.textColor = Colors.totalBackgroundColor
+        titleLabel.textColor = Colors.primaryColor
         titleLabel.textAlignment = .left
         return titleLabel
     }()
@@ -177,9 +39,21 @@ final class LoginViewController: UIViewController {
         return textField
     }()
     
+    private let rememberMeSwitch: UISwitch = {
+        let rememberMeSwitch = UISwitch()
+        return rememberMeSwitch
+    }()
+    
+    private let rememberMeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Beni Unutma"
+        label.textColor = .black
+        return label
+    }()
+    
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = Colors.totalBackgroundColor
+        button.backgroundColor = Colors.primaryColor
         button.setTitle("Giriş Yap", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 15
@@ -206,7 +80,9 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         setupUI()
+        loadRememberedEmail()
     }
     
     private func setupUI() {
@@ -214,9 +90,16 @@ final class LoginViewController: UIViewController {
         
         view.addSubview(titleLabel)
         view.addSubview(stackView)
+        
+        let rememberMeStack = UIStackView(arrangedSubviews: [rememberMeLabel, rememberMeSwitch])
+        rememberMeStack.axis = .horizontal
+        rememberMeStack.spacing = 10
+        rememberMeStack.alignment = .center
+        
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
+        stackView.addArrangedSubview(rememberMeStack)
         stackView.addArrangedSubview(loginButton)
         stackView.addArrangedSubview(registerLabel)
         
@@ -239,7 +122,13 @@ final class LoginViewController: UIViewController {
         ])
     }
     
- 
+    private func loadRememberedEmail() {
+        if let rememberedEmail = UserDefaults.standard.string(forKey: "rememberedEmail") {
+            emailTextField.text = rememberedEmail
+            rememberMeSwitch.isOn = true
+        }
+    }
+    
     @objc private func loginButtonTapped() {
         let authManager = FirebaseAuthManager()
         
@@ -253,6 +142,11 @@ final class LoginViewController: UIViewController {
             guard let self = self else { return }
             if success {
                 print("User logged in successfully")
+                if self.rememberMeSwitch.isOn {
+                    UserDefaults.standard.set(email, forKey: "rememberedEmail")
+                } else {
+                    UserDefaults.standard.removeObject(forKey: "rememberedEmail")
+                }
                 let homeVC = HomeViewController()
                 self.navigationController?.pushViewController(homeVC, animated: true)
             } else {
@@ -260,7 +154,6 @@ final class LoginViewController: UIViewController {
             }
         }
     }
-    
     
     @objc private func registerLabelTapped() {
         let registerVC = RegisterViewController()

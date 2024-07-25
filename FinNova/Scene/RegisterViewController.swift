@@ -12,7 +12,7 @@ final class RegisterViewController: UIViewController {
         let titleLabel = UILabel()
         titleLabel.text = "Kayıt Ol"
         titleLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        titleLabel.textColor = Colors.totalBackgroundColor
+        titleLabel.textColor = Colors.primaryColor
         titleLabel.textAlignment = .left
         return titleLabel
     }()
@@ -38,9 +38,21 @@ final class RegisterViewController: UIViewController {
         return textField
     }()
     
+    private let rememberMeSwitch: UISwitch = {
+        let rememberMeSwitch = UISwitch()
+        return rememberMeSwitch
+    }()
+    
+    private let rememberMeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Beni Unutma"
+        label.textColor = .black
+        return label
+    }()
+    
     private let registerButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = Colors.totalBackgroundColor
+        button.backgroundColor = Colors.primaryColor
         button.setTitle("Kayıt Ol", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 15
@@ -67,6 +79,7 @@ final class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         setupUI()
     }
     
@@ -75,9 +88,16 @@ final class RegisterViewController: UIViewController {
         
         view.addSubview(titleLabel)
         view.addSubview(stackView)
+        
+        let rememberMeStack = UIStackView(arrangedSubviews: [rememberMeLabel, rememberMeSwitch])
+        rememberMeStack.axis = .horizontal
+        rememberMeStack.spacing = 10
+        rememberMeStack.alignment = .center
+        
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
+        stackView.addArrangedSubview(rememberMeStack)
         stackView.addArrangedSubview(registerButton)
         stackView.addArrangedSubview(loginLabel)
         
@@ -112,6 +132,11 @@ final class RegisterViewController: UIViewController {
         signUpManager.createUserWithEmailAndPassword(email: email, password: password) { [weak self] (success, error) in
             guard let self = self else { return }
             if success {
+                if self.rememberMeSwitch.isOn {
+                    UserDefaults.standard.set(email, forKey: "rememberedEmail")
+                } else {
+                    UserDefaults.standard.removeObject(forKey: "rememberedEmail")
+                }
                 let verifyEmailVC = VerifyEmailViewController()
                 self.navigationController?.pushViewController(verifyEmailVC, animated: true)
             } else {

@@ -33,6 +33,7 @@
 		F7C7495E2C51CEF000E24C2A /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495D2C51CEF000E24C2A /* QuoteView.swift */; };
 		F7C749602C51D4FC00E24C2A /* IncomeExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */; };
 		F7C749682C51D71B00E24C2A /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F7C749672C51D71B00E24C2A /* DGCharts */; };
+		F7C7496A2C51DAB500E24C2A /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C749692C51DAB500E24C2A /* ExchangeRate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		F7C7495D2C51CEF000E24C2A /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		F7C7495F2C51D4FC00E24C2A /* IncomeExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewController.swift; sourceTree = "<group>"; };
+		F7C749692C51DAB500E24C2A /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C7495B2C51CC5B00E24C2A /* BudgetItem.swift */,
+				F7C749692C51DAB500E24C2A /* ExchangeRate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				F7C748F22C516EC400E24C2A /* AppDelegate.swift in Sources */,
 				F7C7492F2C5180ED00E24C2A /* Colors.swift in Sources */,
 				F7C7494E2C51BCF800E24C2A /* ForgotPasswordViewController.swift in Sources */,
+				F7C7496A2C51DAB500E24C2A /* ExchangeRate.swift in Sources */,
 				F7C749362C518E6D00E24C2A /* BudgetItemCell.swift in Sources */,
 				F7C749412C51B43700E24C2A /* FirebaseAuthManager.swift in Sources */,
 				F7C749382C51971B00E24C2A /* RegisterViewController.swift in Sources */,
